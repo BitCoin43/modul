@@ -24,7 +24,7 @@
                 ['OS!="win"', {
                   'configurations': {
                     'Release': {
-                      'cflags!': [ '-g' ],
+                      'cflags!': [ '-g', '-fexceptions' ],
                       'cflags_cc!': [ '-g' ],
                       'ldflags!': [ '-g' ]
                     }
