@@ -1,7 +1,6 @@
 #include <node.h>
 #include <string>
 #include "xlsx.h"
-#include "C:/code/other_librarys/v8/include/v8.h"
 #include <fstream>
 #include <iostream>
 
