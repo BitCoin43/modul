@@ -1,0 +1,4 @@
+C:/modul/include/build/CMakeFiles/OpenXLSX.dir
+C:/modul/include/build/CMakeFiles/INSTALL.dir
+C:/modul/include/build/CMakeFiles/ALL_BUILD.dir
+C:/modul/include/build/CMakeFiles/ZERO_CHECK.dir

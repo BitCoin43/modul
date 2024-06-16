@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\modul\include\build\CMakeFiles\079a707d740465b66757dd519eb0b3a2\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\modul\include\OpenXLSXConfig.cmake">
+      <Filter>Buildsystem Input Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{EDDA4092-BE19-34C8-A704-966E0BF5D8AD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Buildsystem Input Files">
+      <UniqueIdentifier>{C9F71254-B2A3-3AE8-8E98-09D072D7CAA8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

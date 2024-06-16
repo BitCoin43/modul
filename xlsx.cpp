@@ -2,13 +2,8 @@
 #include <string>
 #include "xlsx.h"
 #include "C:/code/other_librarys/v8/include/v8.h"
-
-//functions:
-//newDocument(name)
-//doc.newSheet(SheetName)
-//doc.getSheet(SheetName)
-//sheet.set(x, value)
-//doc.save()
+#include <fstream>
+#include <iostream>
 
 using v8::Context;
 using v8::FunctionCallbackInfo;
@@ -35,11 +30,13 @@ void setValue(const FunctionCallbackInfo<Value>& args) {
 
 	String::Utf8Value utf8(isolate, args[0]);
 	std::string x = std::string(*utf8);
+	std::fstream f;
 
 	Local<Value> value = args[1];
 	if (value->IsString()) {
-		String::Utf8Value utf8(isolate, value);
-		std::string val = std::string(*utf8);
+		Local<String> local = args[1].As<v8::String>();
+		String::Utf8Value utf8(isolate, local);
+		std::string val = std::string(*utf8, utf8.length());
 		sheet->put_str(x, val);
 	}
 	if (value->IsNumber()) {
@@ -182,9 +179,10 @@ void newDocument(const FunctionCallbackInfo<Value>& args) {
 		isolate->ThrowException(Exception::TypeError(String::NewFromUtf8(isolate, "Wrong arguments").ToLocalChecked()));
 		return;
 	}
-	Local<v8::Value> arg = args[0];
-	String::Utf8Value utf8(isolate, arg);
-	std::string name = std::string(*utf8);
+	Local<String> local = args[0].As<v8::String>();
+	String::Utf8Value utf8(isolate, local);
+	std::string name = std::string(*utf8, utf8.length());
+
 	Local<Object> obj = Object::New(isolate);
 	document* doc = new document(name);
 

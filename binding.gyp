@@ -5,6 +5,7 @@
             "sources": ["xlsx.cpp", "xlsx.h"],
             "include_dirs" : ["./include/"],
             "libraries": ["<(module_root_dir)/include/build/Release/OpenXLSX"],
+            "cflags_cc": ["-finput-charset=UTF-8"],
             "conditions": [
                 ['OS=="win"', {
                   'configurations': {

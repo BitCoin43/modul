@@ -1,0 +1,10 @@
+^C:\MODUL\INCLUDE\BUILD\CMAKEFILES\079A707D740465B66757DD519EB0B3A2\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/modul/include -BC:/modul/include/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/modul/include/build/OpenXLSX.Library.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
